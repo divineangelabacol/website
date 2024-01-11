@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Mindanao Tourist Spots</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #cfc9c9;
+      border-radius: 5px;
+      background-color: rgba(150, 145, 145, 0.9);
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 15px 0;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      text-align: center;
+    }
+
+    .navbar ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    .navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+
+    .parallax {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #ffffff;
+      padding: 100px 0;
+    }
+
+    .parallax:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: -1;
+    }
+
+    .parallax .container {
+      z-index: 1;
+    }
+
+    .about-section, .contact-section {
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      padding: 60px 0;
+      color: #333;
+    }
+
+    .about-section h2, .contact-section h2 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .about-section .container, .contact-section .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 1px solid #8acee9;
+      padding: 20px;
+      border-radius: 5px;
+      margin: 20px 0;
+    }
+
+    .about-section p, .contact-section p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+      width: calc(100% - 22px); 
+      margin-bottom: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #000000;
+      box-shadow: none;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+    }
+
+    .contact-form button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #555;
+    }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+
+      .contact-form input,
+      .contact-form textarea,
+      .contact-form button {
+        width: 100%;
+      }
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destination.html">Tourist Spots</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home" class="parallax" style="background-image: url('image/bg.jpg');">
+    <div class="container">
+      <h1>Welcome to Mindanao</h1>
+      <p>Discover the beauty of Mindanao's tourist spots.</p>
+    </div>
+  </section>
+
+  <section id="about" class="about-section parallax" style="background-image: url('image/bg1.jpg');">
+    <div class="container">
+      <h2>About Mindanao</h2>
+      <div class="container">
+        <p>Mindanao is a big island and its land area is as big as the combined area of Hokkaido and Shikoku. Known as the "Land of Promise," it is rich in biodiversity and natural resources, with fertile soil and rare typhoon occurrences, offering immense potential in agriculture.</p>
+        <p>Visitors can explore numerous islands and beaches in the southern part of the archipelago. Besides white-sand beaches, Mindanao boasts some of the highest and most scenic waterfalls in the Philippines. Start planning your trip to Mindanao!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section parallax" style="background-image: url('image/bg3.jpg');">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="container">
+        <form class="contact-form" action="#" method="post">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      let offset = window.pageYOffset;
+      document.querySelectorAll('.parallax').forEach(function (prllx) {
+        let speed = 0.7; 
+        prllx.style.backgroundPositionY = offset * speed + 'px'; 
+      });
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>

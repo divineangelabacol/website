@@ -1,0 +1,149 @@
+/* Styling for the video header */
+.video-header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure video covers the entire area */
+}
+
+.header-box {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Translucent box */
+  padding: 20px;
+  border-radius: 10px; /* Add some rounded corners */
+  color: white;
+  z-index: 1; /* Ensure content appears above the video */
+  max-width: 80%; /* Adjust width as needed */
+}
+
+
+
+.header-text {
+  margin-top: 20px; /* Adjust spacing between navbar and header text */
+}
+
+.header-text h1 {
+  font-size: 3em; /* Increase header text size for emphasis */
+  margin-bottom: 10px; /* Adjust spacing between header and paragraph */
+}
+
+
+.menu-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 2; /* Ensure it's above the video */
+  /* Add other styling properties as needed */
+}
+
+.slide-menu {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Initially off-screen */
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: right 0.3s ease; /* Smooth sliding animation */
+  z-index: 1; /* Ensure it's above the video */
+  padding-top: 80px; /* Adjust padding as needed */
+}
+
+.slide-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.slide-menu ul li {
+  padding: 15px 20px;
+}
+
+.slide-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Smooth color change */
+}
+
+.slide-menu ul li a:hover {
+  color: #ffa500; /* Change color on hover */
+}
+
+/* Ensure that the slide menu is visible when the 'show' class is applied */
+.slide-menu.show {
+  right: 0;
+}
+.menu-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-icon i {
+  font-size: 24px; /* Adjust the size of the icons */
+  color: white; /* Set the color of the icons */
+}
+
+.menu-icon .close {
+  display: none;
+}
+
+.menu-icon.open .close {
+  display: block;
+}
+
+.menu-icon.open .default {
+  display: none;
+}
+footer {
+  background-color: #333; 
+  color: white; 
+  padding: 40px 20px; 
+  text-align: center; 
+}
+
+footer h3 {
+  margin-bottom: 20px; 
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer a {
+  margin: 0 10px; 
+}
+footer .social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 36px; 
+  transition: transform 0.3s ease-in-out, color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50%;
+  padding: 16px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  color: #fff;
+  background-color: #333;
+  text-decoration: none;
+}
+
+footer .social-icons a:hover {
+  transform: scale(1.1);
+  color: #ffa500 !important;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}

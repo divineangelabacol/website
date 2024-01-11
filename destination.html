@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mindanao Tourist Spots</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+    }
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+    .navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+    }
+ 
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .filter-buttons button {
+    margin: 5px;
+    padding: 20px 40px;
+    font-size: 20px; 
+    width: auto; 
+    text-align: center;
+    background-color: #555;
+    border-radius: 19px;
+    color: #fff;
+    }
+    .filter-buttons button:hover {
+      transform: translateY(-5px);
+      box-shadow: 10px 20px 19px rgba(83, 255, 112, 0.1);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+      border-radius: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .card h3, .card p {
+      padding: 10px;
+      margin: 0;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 10px 20px 19px rgba(0, 0, 0, 0.1);
+    }
+ 
+    .filter-buttons.two-lines {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 768px) {
+    .filter-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .filter-buttons button {
+      margin: 5px;
+      padding: 12px 24px;
+      font-size: 16px;
+      width: auto;
+      text-align: center;
+      background-color: #555;
+      color: #fff;
+    }
+  }
+
+
+  @media screen and (max-width: 480px) {
+    .filter-buttons button {
+      padding: 16px 32px;
+      font-size: 18px;
+      background-color: #333;
+    }
+  }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="container">
+    <h2>Mindanao Tourist Spots</h2>
+    <div class="filter-buttons">
+      <button class="filter" data-filter="all">All</button>
+      <button class="filter" data-filter="beaches">Beaches</button>
+      <button class="filter" data-filter="mountains">Mountains</button>
+      <button class="filter" data-filter="falls">Falls</button>
+      <button class="filter" data-filter="park">Parks</button>
+      <button class="filter" data-filter="lake">Lakes</button>
+    </div>
+
+    <div class="grid">
+      <!--Beaches-->
+      <div class="card beaches">
+        <img src="image/beaches/samal.jpg" alt="Beach 1">
+        <h3>Samal Island</h3>
+        <p>Samal Island is known for its white sand beaches, pristine waters, dive spots, coral gardens, caves to explore, refreshing Hagimit Falls, mountains to climb, the Guinness Book of World record holder for the biggest concentration of fruit bats – the Monfort Bat Caves and home to thousands of giant clams (Taclobo).</p>
+      </div>
+      <div class="card beaches">
+        <img src="image/beaches/zamboanga.jpg" alt="Beach 2">
+        <h3>Sta. Cruz Island</h3>
+        <p>Sta. Cruz Island in Zamboanga is actually composed of 2 islands – Great and Small. Great Sta. Cruz Island is an inhabited island off the coast of Zamboanga City. With its breathtaking blue waters and fine sand beach with pink hue, it’s no wonder it was recognized by National Geographic as one of the 21 Best Beaches in the World in 2017.</p>
+      </div>
+      <div class="card beaches">
+        <img src="image/beaches/Sulu.jpg" alt="Beach 3">
+        <h3>Mang Sali Beach Resort</h3>
+        <p>Mang Sali Beach Resort in Sulu, Philippines is a stunning tropical paradise that offers visitors a unique blend of relaxation and adventure. Located along the coast of Sulu, this resort boasts breathtaking views of the sea, pristine white sand beaches, and lush vegetation.</p>
+      </div>
+      <div class="card beaches">
+        <img src="image/beaches/siargao.jpg" alt="Beach 4">
+        <h3>siargao Island</h3>
+        <p>Siargao is an island of nine municipalities in the province of Surigao del Norte. Known as the “Surfing Capital of the Philippines”, Siargao is mainly responsible for introducing surfing to the country. Apart from surfing, Siargao is also open to other activities such as cave explorations and rock climbing.</p>
+      </div>
+
+      <!--End of Beaches-->
+      <!--Mountains-->
+      <div class="card mountains">
+        <img src="image/mountains/bukidnon.jpg" alt="Mountain 1">
+        <h3>Mount Dulang-Dulang</h3>
+        <p>It is the second highest mountain of the Philippines at 2,941 metres (9,649 ft) above sea level, second only to Mount Apo of Davao at 2,956 m (9,698 ft) and slightly higher than Mount Pulag of Luzon, the third highest at 2,928 m (9,606 ft). The mountain is regarded by the Talaandig tribe of Lantapan as a sacred place.</p>
+      </div>
+      <div class="card mountains">
+        <img src="image/mountains/sultanK.jpeg" alt="Mountain 2">
+        <h3>La Palmera Mountain Ridge</h3>
+        <p>La Palmera is tucked in the landlocked town of Columbio, Sultan Kudarat in south central Mindanao, Philippines. The place is named after the palm plantation that surrounds the ridges. This plantation has been a source of livelihood to the B’laans – the indigenous people of Sultan Kudarat.</p>
+      </div>
+      <div class="card mountains">
+        <img src="image/mountains/MT.apo.webp" alt="Mountain 3">
+        <h3>Mount Apo</h3>
+        <p>Mount Apo, active volcano, south central Mindanao, 20 miles (32 km) west of Davao City; it is the highest point in the Philippines, rising to 9,692 feet (2,954 metres). Part of the Cordillera Central, it is covered by a forest of tall, tropical hardwoods; two subsidiary peaks nearly match its height. Mount Apo National Park, established in 1936, has an area of 199,819 acres (80,864 hectares); it is the home of the rare Philippine eagle and features numerous peaks and valleys, as well as Malasita Falls, Sibulao Lake, and the Kisinte Hot Springs.</p>
+      </div>
+      <!--End of Mountains-->
+      <!--Parks-->
+      <div class="card park">
+        <img src="image/park/EdenD.jpg" alt="Mountain 1">
+        <h3>Eden Nature Park</h3>
+        <p>Nestled in the lush greenery of Davao City, Eden Nature Park and Resort offers a unique blend of nature and comfort. The hotel boasts a variety of facilities to make your stay as comfortable as possible, including a coffee shop, laundry service, restaurant, and room service.</p>
+      </div>
+      <div class="card park">
+        <img src="image/park/jds.jpg" alt="Mountain 2">
+        <h3>Jardín De Señorita: Your Exquisite Escape</h3>
+        <p>Nestled in the tranquil beauty of Kapatagan, Digos, Davao del Sur, Jardín De Señorita stands as a hidden gem, offering a luxurious and enchanting retreat that captures the essence of nature's splendor and warm Filipino hospitality.</p>
+      </div>
+      <div class="card park">
+        <img src="image/park/peopleparkD.JPG" alt="Mountain 3">
+        <h3>People's Park</h3>
+        <p>People's Park in Davao City is a four hectare wide cultural-theme park featuring a mini-forest, man-made falls, a dancing fountain at night, fish ponds, children's playground and a giant durian dome.</p>
+      </div>
+      <!--End of Parks-->
+      <!--Falss-->
+      <div class="card falls">
+        <img src="image/falls/awao falls.jpg" alt="Falls 1">
+        <h3>Awao Falls</h3>
+        <p>With an astonishing height of 80 feet, water drapes from the top of the accented boulder, creating a beautifully and intricately patterned white-water curtain. Commonly known as the Falls 1, the first tier has a few open cottages around the area with a water basin perfect for swimming.</p>
+      </div>
+      <div class="card falls">
+        <img src="image/falls/tinagofalls.jpg" alt="Falls 3">
+        <h3>Tinago Falls</h3>
+        <p>The falls is high, its very cold waters cascading beautifully into a deep and calm basin-like pool which appears like a blue-colored lagoon.</p>
+      </div>
+  
+      <div class="card falls">
+        <img src="image/falls/lakesebu_falls.webp" alt="Falls 2">
+        <h3>Lake Sebu 7 Falls</h3>
+        <p>It's a series of majestic falls that were uniquely cascaded together by Mother Nature. All seven of them form a charming and breathtaking sight. Their majestic beauty got even more magnified by the vivid colors of the lush green plants and trees surrounding them</p>
+      </div>
+  
+      <div class="card falls">
+        <img src="image/falls/iligan falls.jpg" alt="Falls 4">
+        <h3>Iligan Falls</h3>
+        <p> a coastal highly urbanized city in the Northern Mindanao region. Located at the Western coast of Mindanao facing Iligan Bay, bounded on the north by the Province of Bukidnon, on the south by the Province of Lanao del Norte and Lanao del Sur and on the West by Iligan bay.</p>
+      </div>
+  
+  
+      <!--End of falls-->
+      <!--Lakes-->
+      <div class="card lake">
+        <img src="image/lakes/lake sebu_lake.jpg" alt="lake 1">
+        <h3>Lake Sebu</h3>
+        <p>The placid lake of Lake Sebu can be found in Allah Valley near the municipality of Surallah, South Cotabato. Surrounded by rolling hills and mountains covered with thick rain forest, the lake has an area of 354 hectares (870 acres), with an elevation of approximately 1,000 metres (3,300 ft).</p>
+      </div>
+      <div class="card lake">
+        <img src="image/lakes/lake dapao.jpg" alt="lake 1">
+        <h3>Lake Dapao</h3>
+        <p>Lake Dapao is a deep water lake located in the province of Lanao del Sur, southwest of Lake Lanao, in the island of Mindanao in the Philippines.</p>
+      </div>
+      <div class="card lake">
+        <img src="image/lakes/lake apo.jpg" alt="lake 1">
+        <h3>Lake Apo</h3>
+        <p>Lake Apo is a crater lake in Barangay Guinoyoran in the city of Valencia in Bukidnon province in the Philippines.</p>
+      </div>
+      <!--end of lakes-->
+    </div>
+
+
+  <script>
+  const filterButtons = document.querySelectorAll('.filter');
+  const cards = Array.from(document.querySelectorAll('.card'));
+  const grid = document.querySelector('.grid');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filterValue = button.getAttribute('data-filter');
+      cards.forEach(card => {
+        if (filterValue === 'all' || card.classList.contains(filterValue)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+  cards.sort((a, b) => {
+  const titleA = a.querySelector('h3').textContent.trim().toLowerCase();
+  const titleB = b.querySelector('h3').textContent.trim().toLowerCase();
+  return titleA.localeCompare(titleB);
+});
+
+grid.innerHTML = '';
+
+
+cards.forEach(card => {
+  grid.appendChild(card);
+});
+
+  </script>
+</body>
+</html>
+    
